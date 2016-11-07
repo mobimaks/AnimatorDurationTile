@@ -18,12 +18,12 @@
 <manifest
     package="uk.co.nickbutcher.animatordurationtile"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    
-    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
 
     <application
-        android:label="@string/app_name"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name">
 
         <service
             android:name=".SelectAnimatorDuration"
@@ -43,6 +43,18 @@
             android:exported="true"
             android:icon="@drawable/ic_animator_duration_5x"
             android:label="@string/label_toggle_animator_duration_scale"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".FinishActivitiesTileService"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/ic_dont_on"
+            android:label="@string/label_toggle_dont_keep_activities"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>

@@ -17,9 +17,10 @@
 
 <resources>
 
-    <string name="app_name">Animator Duration Quick Setting</string>
+    <string name="app_name">Developer Quick Setting</string>
     <string name="label_animator_duration_scale">Animator duration scale</string>
     <string name="label_toggle_animator_duration_scale">Toggle animator duration scale</string>
+    <string name="label_toggle_dont_keep_activities">"Toggle Don't keep activities"</string>
     <string name="dialog_title">Animator duration scale</string>
     <string name="permission_required_toast">Need to grant permission. Please run:\n\n
         adb shell pm grant uk.co.nickbutcher.animatordurationtile
